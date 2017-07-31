@@ -4,8 +4,8 @@ const aritGeo = require('../src/aritGeo');
 
 describe('Arithmetic | Geometric', () => {
     describe(`aritGeo('')`, () => {
-        it('should return `Argument must be an array` for invalid argument', () => {
-            assert.equal('Argument must be an array', aritGeo(''));
+        it('should return `0` for invalid argument', () => {
+            assert.equal(0, aritGeo(''));
         });
     });
     describe('aritGeo([])', () => {
@@ -38,11 +38,6 @@ describe('Arithmetic | Geometric', () => {
             assert.equal('Geometric', aritGeo([2, 6, 18, 54]));
         });
     });
-    describe('aritGeo([1, 3, 9, 27])', () => {
-        it('should return `Geometric` for geometric progression', () => {
-            assert.equal('Geometric', aritGeo([1, 3, 9, 27]));
-        });
-    });
     describe('aritGeo([4, 8, 16, 32, 64, 128, 256])', () => {
         it('should return `Geometric` for geometric progression', () => {
             assert.equal('Geometric', aritGeo([4, 8, 16, 32, 64, 128, 256]));
@@ -53,9 +48,10 @@ describe('Arithmetic | Geometric', () => {
             assert.equal(-1, aritGeo([2, 5, 4, 20, 16]));
         });
     });
-    describe('aritGeo([3, 5, 7, 14, 28])', () => {
+    // bug test
+    describe('aritGeo([2, 4, 7, 9, 11])', () => {
         it('should return `-1` for neither arithmetic or geometric', () => {
-            assert.equal(-1, aritGeo([3, 5, 7, 14, 28]));
+            assert.equal(-1, aritGeo([2, 4, 7, 9, 11]));
         });
     });
 });
