@@ -1,5 +1,5 @@
 # aritGeo
----
+
 ## Getting Started
 These instruction will get you a copy of the project up and running on your local machine for testing purposes.
 
